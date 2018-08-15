@@ -1,0 +1,7 @@
+- [] redux-saga
+- [] selector
+- [] connect server
+- [] hot loading
+- [] eslint
+- [] preCommit
+- [] unit test
