@@ -8,7 +8,7 @@
     "react-scripts": "1.1.4"
   },
   "lint-staged": {
-    "src/*.{js,jsx,json,css}": [
+    "*.{js,json,css,md}": [
       "prettier --single-quote --write",
       "git add"
     ]
