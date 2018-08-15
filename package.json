@@ -9,7 +9,7 @@
   },
   "lint-staged": {
     "*.{js,json,css,md}": [
-      "prettier --no-semi true --write",
+      "prettier --no-semi false --write",
       "git add"
     ]
   },
