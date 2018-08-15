@@ -1,7 +1,12 @@
 - [] redux-saga
 - [] selector
 - [] connect server
-- [] hot loading
+- [ x ] hot loading
 - [] eslint
 - [] preCommit
 - [] unit test
+- [] dynamic import
+- [] prettier
+- [] react router
+- [] .env
+- [] hoc
