@@ -9,7 +9,7 @@
   },
   "lint-staged": {
     "*.{js,json,css,md}": [
-      "prettier --no-semi --single-quote --write",
+      "prettier --no-semi --write",
       "git add"
     ]
   },
