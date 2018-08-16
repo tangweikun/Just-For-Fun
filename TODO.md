@@ -2,11 +2,12 @@
 - [] selector
 - [] connect server
 - [ x ] hot loading
-- [] eslint
-- [] preCommit
+- [x] eslint
+- [x] preCommit
 - [] unit test
 - [] dynamic import
-- [] prettier
+- [x] prettier
 - [] react router
-- [] .env
+- [x] .env
 - [] hoc
+- [] error handle
