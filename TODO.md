@@ -1,4 +1,4 @@
-- [] redux-saga
+- [x] redux-saga
 - [] selector
 - [] connect server
 - [ x ] hot loading
@@ -11,3 +11,5 @@
 - [x] .env
 - [] hoc
 - [] error handle
+- [] 支持设置 dev/qa
+- [] 错误监控处理
