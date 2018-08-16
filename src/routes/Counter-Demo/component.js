@@ -1,6 +1,18 @@
 import React, { Component } from "react"
 
 export default class Counter extends Component {
+  async componentDidMount() {
+    const foo = await fetch("/api/command/execute", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      body:
+        "message=" +
+        encodeURIComponent(JSON.stringify({ command: "600422", data: {} }))
+    }).then(response => response.json())
+  }
+
   render() {
     const {
       value,
