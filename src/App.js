@@ -1,10 +1,10 @@
 import React from "react"
-import { BrowserRouter as Router, Route, Link } from "react-router-dom"
+import { BrowserRouter, Route, Link } from "react-router-dom"
 import Counter from "./routes/Counter-Demo"
 import TodoCounter from "./routes/Todo-Demo"
 
 const App = () => (
-  <Router>
+  <BrowserRouter>
     <div>
       <ul>
         <li>
@@ -24,7 +24,7 @@ const App = () => (
       <Route path="/about" component={Counter} />
       <Route path="/topics" component={TodoCounter} />
     </div>
-  </Router>
+  </BrowserRouter>
 )
 
 const Home = () => (

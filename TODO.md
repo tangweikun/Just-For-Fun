@@ -1,15 +1,22 @@
-- [x] redux-saga
+- [ x ] redux-saga
 - [] selector
 - [] connect server
 - [ x ] hot loading
-- [x] eslint
-- [x] preCommit
+- [ x ] eslint
+- [ x ] preCommit
 - [] unit test
 - [] dynamic import
-- [x] prettier
+- [ x ] prettier
 - [] react router
-- [x] .env
+- [ x ] .env
 - [] hoc
 - [] error handle
 - [] 支持设置 dev/qa
 - [] 错误监控处理
+- [] font icon
+- [] deploy
+- [] websocket
+- [] sass
+- [] adaptive
+- [] react-responsive-carousel
+- [] socket.io
