@@ -2,7 +2,7 @@
 - [] selector
 - [] connect server
 - [ x ] hot loading
-- [ x ] eslint
+- [ ] eslint
 - [ x ] preCommit
 - [] unit test
 - [] dynamic import
@@ -20,3 +20,14 @@
 - [] adaptive
 - [] react-responsive-carousel
 - [] socket.io
+- [] Dynamic import(async / await)
+- [] polyfills
+- [] config prettier rule
+- [] css 初始化设置
+- [] eslint-disable-line
+- [] Pre-Rendering into Static HTML Files
+- [] commit before test
+- [] Initializing Test Environment
+- [] Analyzing the Bundle Size
+- [] deployment
+- [] Moment.js locales are missing

@@ -8,7 +8,7 @@ const App = () => (
     <div>
       <ul>
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/">{process.env.REACT_APP_SECRET_CODE}</Link>
         </li>
         <li>
           <Link to="/about">About</Link>
