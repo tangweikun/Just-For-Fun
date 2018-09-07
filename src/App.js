@@ -1,7 +1,7 @@
 import React from "react"
 import { BrowserRouter, Route, Link } from "react-router-dom"
-import Counter from "./routes/Counter-Demo"
-import TodoCounter from "./routes/Todo-Demo"
+import Counter from "routes/Counter-Demo"
+import TodoCounter from "routes/Todo-Demo"
 
 const App = () => (
   <BrowserRouter>

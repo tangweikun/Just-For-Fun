@@ -167,3 +167,13 @@ global.localStorage = localStorageMock
 ```
 
 ## Deployment
+
+## How to avoid using relative path imports in create-react-app?
+
+Create a file called `.env` in the project root and write the import path
+
+```bash
+NODE_PATH=src/
+```
+
+After that restart the development server. Now you should be able to import anything inside `\*src/` without relative paths.
