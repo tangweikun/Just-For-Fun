@@ -177,3 +177,12 @@ NODE_PATH=src/
 ```
 
 After that restart the development server. Now you should be able to import anything inside `\*src/` without relative paths.
+
+## How to get query parameters in react-router4?
+
+> The ability to parse query strings was taken out of react-routerV4 because there have been user requests over the years to support different implementation. So the decision has been given to users to choose the implementation they like. The recommended approach is to use query strings library.
+
+```js
+const queryString = require("query-string")
+const parsed = queryString.parse(props.location.search)
+```
