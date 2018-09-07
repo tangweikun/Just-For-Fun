@@ -15,7 +15,6 @@
 - [ ] 错误监控处理
 - [ ] font icon
 - [ ] deploy
-- [ ] sass
 - [ ] adaptive
 - [ ] react-responsive-carousel
 - [ ] socket.io
