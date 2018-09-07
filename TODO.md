@@ -29,3 +29,4 @@
 - [ ] Analyzing the Bundle Size
 - [ ] deployment
 - [ ] Moment.js locales are missing
+- [ ] Main Layout
