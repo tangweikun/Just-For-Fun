@@ -30,3 +30,4 @@
 - [ ] deployment
 - [ ] Moment.js locales are missing
 - [ ] Main Layout
+- [ ] Remove Demos
