@@ -1,33 +1,32 @@
-- [ x ] redux-saga
-- [] selector
-- [] connect server
-- [ x ] hot loading
+- [x] redux-saga
+- [x] selector
+- [x] connect server
+- [x] hot loading
 - [ ] eslint
-- [ x ] preCommit
-- [] unit test
-- [] dynamic import
-- [ x ] prettier
-- [] react router
-- [ x ] .env
-- [] hoc
-- [] error handle
-- [] 支持设置 dev/qa
-- [] 错误监控处理
-- [] font icon
-- [] deploy
-- [] websocket
-- [] sass
-- [] adaptive
-- [] react-responsive-carousel
-- [] socket.io
-- [] Dynamic import(async / await)
-- [] polyfills
-- [] config prettier rule
-- [] css 初始化设置
-- [] eslint-disable-line
-- [] Pre-Rendering into Static HTML Files
-- [] commit before test
-- [] Initializing Test Environment
-- [] Analyzing the Bundle Size
-- [] deployment
-- [] Moment.js locales are missing
+- [x] preCommit
+- [ ] unit test
+- [ ] dynamic import
+- [x] prettier
+- [ ] react router
+- [x] .env
+- [ ] hoc
+- [ ] error handle
+- [ ] 支持设置 dev/qa
+- [ ] 错误监控处理
+- [ ] font icon
+- [ ] deploy
+- [ ] sass
+- [ ] adaptive
+- [ ] react-responsive-carousel
+- [ ] socket.io
+- [ ] Dynamic import(async / await)
+- [ ] polyfills
+- [ ] config prettier rule
+- [ ] css 初始化设置
+- [ ] eslint-disable-line
+- [ ] Pre-Rendering into Static HTML Files
+- [ ] commit before test
+- [ ] Initializing Test Environment
+- [ ] Analyzing the Bundle Size
+- [ ] deployment
+- [ ] Moment.js locales are missing
