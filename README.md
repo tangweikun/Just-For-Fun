@@ -33,7 +33,7 @@ yarn start / npm run start
 - [x] 代码风格
   > 使用`prettier`和`preCommit`,统一项目代码风格
 - [x] hot loading
-- [ ] 单元测试
+- [x] 单元测试
   > 基于`Jest`进行单元测试,配置`commit before test`
 - [x] Redux DevTools
 
