@@ -2,6 +2,8 @@ import React from "react"
 import { BrowserRouter, Route, Link } from "react-router-dom"
 import Counter from "routes/Counter-Demo"
 import TodoCounter from "routes/Todo-Demo"
+import ServiceApiExample from "routes/ServiceApiExample"
+import { testApi } from "./api/index"
 
 const App = () => (
   <BrowserRouter>
@@ -16,6 +18,9 @@ const App = () => (
         <li>
           <Link to="/topics">Topics</Link>
         </li>
+        <li>
+          <Link to="/service-test">service testApi</Link>
+        </li>
       </ul>
 
       <hr />
@@ -23,6 +28,7 @@ const App = () => (
       <Route exact path="/" component={Home} />
       <Route path="/about" component={Counter} />
       <Route path="/topics" component={TodoCounter} />
+      <Route exact path="/service-test" component={ServiceApiExample} />
     </div>
   </BrowserRouter>
 )

@@ -12,7 +12,16 @@
     "redux-saga": "^0.16.0",
     "reselect": "^3.0.1"
   },
-  "proxy": "http://qa.h5-game.8win.com",
+  "proxy": {
+    "/api": {
+      "target": "http://qa.m.8win.com",
+      "changeOrigin": true,
+      "pathRewrite": {
+        "^/api": ""
+      },
+      "ws": true
+    }
+  },
   "lint-staged": {
     "*.{js,json,css,md}": [
       "prettier --no-semi --write",
