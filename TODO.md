@@ -2,7 +2,6 @@
 - [x] selector
 - [x] connect server
 - [x] hot loading
-- [ ] eslint
 - [x] preCommit
 - [ ] unit test
 - [ ] dynamic import
@@ -22,7 +21,6 @@
 - [ ] polyfills
 - [ ] config prettier rule
 - [ ] css 初始化设置
-- [ ] eslint-disable-line
 - [ ] Pre-Rendering into Static HTML Files
 - [ ] commit before test
 - [ ] Initializing Test Environment
@@ -33,3 +31,4 @@
 - [ ] Remove Demos
 - [x] Avoid using relative path imports
 - [x] How to get query parameters
+- [x] Redux DevTools
