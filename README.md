@@ -1,6 +1,6 @@
 # JUST FOR FUN
 
->     海外项目C端基础框架
+海外项目 C 端基础框架,使用`React`官方推荐的 [create-react-app](https://github.com/facebook/create-react-app) 搭建
 
 ## 快速开始
 
@@ -37,4 +37,16 @@ yarn start / npm run start
   > 基于`Jest`进行单元测试,配置`commit before test`
 - [x] Redux DevTools
 
-## Project structure
+## Why use `create-react-app`
+
+[10 Reasons I Love create-react-app](https://www.peterbe.com/plog/10-reasons-i-love-create-react-app)
+
+[create-react-app vs other starter projects](https://www.javascriptstuff.com/create-react-app/)
+
+- Dan Abramov
+- Get started with React immediately
+- No webpack config: one less thing to learn at first
+- No babel config: ditto
+- Very few dependencies to manage
+- Running Tests Included
+- Hot reloading
