@@ -1,30 +1,43 @@
 import React, { Component } from "react"
-import { testApi } from "../../api"
+// import { testApi } from '../../api'
 
 export default class Counter extends Component {
-  async componentDidMount() {
-    const bar = await testApi({
-      command: "600422",
-      data: {}
-    })
-  }
+  // async componentDidMount() {
+  //   const bar = await testApi({
+  //     command: '600422',
+  //     data: {},
+  //   })
+  // }
 
   render() {
     const {
-      value,
-      onIncrement,
-      onIncrementAsync,
-      onDecrement,
-      onIncrementIfOdd
+      counter,
+      plusFirstThenMultiply,
+      plusFive,
+      subtract,
+      plusFirstThenDivideByTen
     } = this.props
 
     return (
-      <p>
-        Clicked: {value} times <button onClick={onIncrement}>+</button>{" "}
-        <button onClick={onDecrement}>-</button>{" "}
-        <button onClick={onIncrementIfOdd}>Increment if odd</button>{" "}
-        <button onClick={onIncrementAsync}>Increment async</button>
-      </p>
+      <div>
+        <p>总次数: {counter}</p>
+        <p>
+          <button onClick={() => plusFirstThenMultiply(2, 3)}>
+            plus 2 First Then Multiply 3
+          </button>{" "}
+        </p>
+        <p>
+          <button onClick={plusFive}>plus five</button>
+        </p>
+        <p>
+          <button onClick={() => subtract(2)}>subtract 2</button>
+        </p>
+        <p>
+          <button onClick={() => plusFirstThenDivideByTen(2)}>
+            plus 2 First Then Divide By Ten
+          </button>
+        </p>
+      </div>
     )
   }
 }

@@ -3,10 +3,10 @@
 - [x] connect server
 - [x] hot loading
 - [x] preCommit
-- [ ] unit test
-- [x] dynamic import
+- [x] unit test
+- [ ] dynamic import
 - [x] prettier
-- [x] react router v4
+- [x] react router
 - [x] .env
 - [ ] hoc
 - [ ] error handle

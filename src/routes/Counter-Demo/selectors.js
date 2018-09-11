@@ -1,1 +1,1 @@
-export const valueSelector = state => state.counter * 100
+export const getCounter = state => state.counter + "次"

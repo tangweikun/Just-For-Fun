@@ -1,16 +1,25 @@
 import { connect } from "react-redux"
 import { createStructuredSelector } from "reselect"
-import { onIncrement, onDecrement } from "./actions"
-import { valueSelector } from "./selectors"
+import {
+  plusFirstThenMultiplyAction,
+  plusFiveAction,
+  subtractAction,
+  plusFirstThenDivideByTenAction
+} from "./actions"
+import { getCounter } from "./selectors"
 import Counter from "./component"
 
 const mapStateToProps = createStructuredSelector({
-  value: valueSelector
+  counter: getCounter
 })
 
 const mapDispatchToProps = dispatch => ({
-  onIncrement: () => dispatch(onIncrement()),
-  onDecrement: () => dispatch(onDecrement())
+  plusFirstThenMultiply: (addend, multiplier) =>
+    dispatch(plusFirstThenMultiplyAction(addend, multiplier)),
+  plusFive: () => dispatch(plusFiveAction()),
+  subtract: subtrahend => dispatch(subtractAction(subtrahend)),
+  plusFirstThenDivideByTen: addend =>
+    dispatch(plusFirstThenDivideByTenAction(addend))
 })
 
 export default connect(
