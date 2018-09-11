@@ -1,77 +1,25 @@
 import React from "react"
 import { BrowserRouter, Route, Link } from "react-router-dom"
-import Counter from "routes/Counter-Demo"
-import TodoCounter from "routes/Todo-Demo"
-import ServiceApiExample from "routes/ServiceApiExample"
-import { testApi } from "./api/index"
+import { renderRoutes } from "react-router-config"
 
-const App = () => (
-  <BrowserRouter>
-    <div>
-      <ul>
-        <li>
-          <Link to="/">{process.env.REACT_APP_SECRET_CODE}</Link>
-        </li>
-        <li>
-          <Link to="/about">About</Link>
-        </li>
-        <li>
-          <Link to="/topics">Topics</Link>
-        </li>
-        <li>
-          <Link to="/service-test">service testApi</Link>
-        </li>
-      </ul>
-
-      <hr />
-
-      <Route exact path="/" component={Home} />
-      <Route path="/about" component={Counter} />
-      <Route path="/topics" component={TodoCounter} />
-      <Route exact path="/service-test" component={ServiceApiExample} />
-    </div>
-  </BrowserRouter>
-)
-
-const Home = () => (
+const App = ({ route }) => (
   <div>
-    <h2>Home</h2>
-  </div>
-)
-
-const About = () => (
-  <div>
-    <h2>About</h2>
-  </div>
-)
-
-const Topics = ({ match }) => (
-  <div>
-    <h2>Topics</h2>
     <ul>
       <li>
-        <Link to={`${match.url}/rendering`}>Rendering with React</Link>
+        <Link to="/">{process.env.REACT_APP_SECRET_CODE}</Link>
       </li>
       <li>
-        <Link to={`${match.url}/components`}>Components</Link>
+        <Link to="/counter">counter</Link>
       </li>
       <li>
-        <Link to={`${match.url}/props-v-state`}>Props v. State</Link>
+        <Link to="/topics">Topics</Link>
+      </li>
+      <li>
+        <Link to="/service-test">service testApi</Link>
       </li>
     </ul>
-
-    <Route path={`${match.url}/:topicId`} component={Topic} />
-    <Route
-      exact
-      path={match.url}
-      render={() => <h3>Please select a topic.</h3>}
-    />
-  </div>
-)
-
-const Topic = ({ match }) => (
-  <div>
-    <h3>{match.params.topicId}</h3>
+    {renderRoutes(route.routes)}
+    <hr />
   </div>
 )
 

@@ -4,11 +4,15 @@ import { Provider } from "react-redux"
 import { createStore, applyMiddleware } from "redux"
 import createSagaMiddleware from "redux-saga"
 import { composeWithDevTools } from "redux-devtools-extension"
+import { BrowserRouter } from "react-router-dom"
+import { renderRoutes } from "react-router-config"
+
 import "./index.css"
 import App from "./App"
 import registerServiceWorker from "./registerServiceWorker"
 import rootSaga from "./sagas"
 import rootReducer from "./reducers"
+import { routes } from "./route"
 
 // create the saga middleware
 const sagaMiddleware = createSagaMiddleware()
@@ -24,7 +28,10 @@ sagaMiddleware.run(rootSaga)
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <BrowserRouter>
+      {/* kick it all off with the root route */}
+      {renderRoutes(routes)}
+    </BrowserRouter>
   </Provider>,
   document.getElementById("root")
 )

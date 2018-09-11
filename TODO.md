@@ -4,9 +4,9 @@
 - [x] hot loading
 - [x] preCommit
 - [ ] unit test
-- [ ] dynamic import
+- [x] dynamic import
 - [x] prettier
-- [ ] react router
+- [x] react router v4
 - [x] .env
 - [ ] hoc
 - [ ] error handle
