@@ -34,7 +34,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "precommit": "lint-staged",
+    "test:staged": "CI=true react-scripts test",
+    "precommit": "lint-staged && npm run test:staged",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
