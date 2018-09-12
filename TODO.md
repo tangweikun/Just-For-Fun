@@ -32,3 +32,4 @@
 - [x] Avoid using relative path imports
 - [x] How to get query parameters
 - [x] Redux DevTools
+- [x] normalize css
