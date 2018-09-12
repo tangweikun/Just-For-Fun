@@ -4,7 +4,7 @@
 - [x] hot loading
 - [x] preCommit
 - [x] unit test
-- [ ] dynamic import
+- [x] dynamic import
 - [x] prettier
 - [x] react router
 - [x] .env
@@ -17,7 +17,6 @@
 - [x] adaptive
 - [ ] react-responsive-carousel
 - [ ] socket.io
-- [ ] Dynamic import(async / await)
 - [ ] polyfills
 - [ ] config prettier rule
 - [x] css 初始化设置(normalize.css)
@@ -32,3 +31,4 @@
 - [x] Avoid using relative path imports
 - [x] How to get query parameters
 - [x] Redux DevTools
+- [ ] CSS 命名问题
