@@ -14,13 +14,13 @@
 - [ ] 错误监控处理
 - [ ] font icon
 - [ ] deploy
-- [ ] adaptive
+- [x] adaptive
 - [ ] react-responsive-carousel
 - [ ] socket.io
 - [ ] Dynamic import(async / await)
 - [ ] polyfills
 - [ ] config prettier rule
-- [ ] css 初始化设置
+- [x] css 初始化设置(normalize.css)
 - [ ] Pre-Rendering into Static HTML Files
 - [ ] commit before test
 - [ ] Initializing Test Environment
@@ -32,4 +32,3 @@
 - [x] Avoid using relative path imports
 - [x] How to get query parameters
 - [x] Redux DevTools
-- [x] normalize css
