@@ -38,7 +38,7 @@ yarn start / npm run start
 - [x] Redux DevTools
 - [x] source-map-explorer
   > yarn analyze
-  > 可以查看所 buid 后拆分包占比大小
+  > 可以查看所 build 后拆分包占比大小
 
 ## Why use `create-react-app`
 
