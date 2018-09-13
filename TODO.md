@@ -32,3 +32,4 @@
 - [x] How to get query parameters
 - [x] Redux DevTools
 - [ ] CSS 命名问题
+- [x] source-map-explorer

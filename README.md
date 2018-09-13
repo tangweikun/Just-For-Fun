@@ -36,6 +36,9 @@ yarn start / npm run start
 - [x] 单元测试
   > 基于`Jest`进行单元测试,配置`commit before test`
 - [x] Redux DevTools
+- [x] source-map-explorer
+  > yarn analyze
+  > 可以查看所 buid 后拆分包占比大小
 
 ## Why use `create-react-app`
 
