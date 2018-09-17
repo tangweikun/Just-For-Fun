@@ -4,9 +4,12 @@
   "private": true,
   "dependencies": {
     "adaptive.js": "^0.0.2",
+    "i18next": "^11.9.0",
+    "i18next-browser-languagedetector": "^2.2.3",
     "normalize.css": "^8.0.0",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
+    "react-i18next": "^7.12.0",
     "react-loadable": "^5.5.0",
     "react-redux": "^5.0.7",
     "react-router-config": "^1.0.0-beta.4",
