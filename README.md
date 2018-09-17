@@ -39,6 +39,8 @@ yarn start / npm run start
 - [x] source-map-explorer
   > yarn analyze
   > 可以查看所 build 后拆分包占比大小
+- [x] react-i18next
+      [react-i18next documentation](https://react.i18next.com/components/i18next-instance)
 
 ## Why use `create-react-app`
 
