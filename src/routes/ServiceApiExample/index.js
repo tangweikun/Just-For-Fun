@@ -1,16 +1,18 @@
-import React from "react"
-import { connect } from "react-redux"
-import { loadGetAPITest, loadPostAPITest } from "./actions"
-import { testApi } from "../../api/index"
+import React from 'react'
+import { connect } from 'react-redux'
+import { createStructuredSelector } from 'reselect'
+import { loadGetAPITest, loadPostAPITest } from './actions'
+import { testApi } from '../../api/index'
+import { store } from '../../index'
+import { getInjectAsync } from '../../utils/getInjectAsync'
+import reducer from './reducer'
+import sagas from './sagas'
+import { makeSelectPostData, makeSelectGetData } from './selectors'
 
+getInjectAsync({ store, reducer, sagas, reducerName: 'serciveExample' })
 class ServiceApiExample extends React.Component {
   render() {
-    const {
-      getReseponseData,
-      postReseponseData,
-      testPostApi,
-      testGetApi
-    } = this.props
+    const { getReseponseData, postReseponseData, testPostApi, testGetApi } = this.props
 
     return (
       <div>
@@ -36,17 +38,17 @@ class ServiceApiExample extends React.Component {
   }
 }
 
-const mapStateToProps = state => ({
-  postReseponseData: state.serviceExample.postDatas,
-  getReseponseData: state.serviceExample.getDatas
+const mapStateToProps = createStructuredSelector({
+  postReseponseData: makeSelectPostData(),
+  getReseponseData: makeSelectGetData(),
 })
 
 const mapDispatchToProps = dispatch => ({
   testPostApi: () => dispatch(loadPostAPITest()),
-  testGetApi: () => dispatch(loadGetAPITest())
+  testGetApi: () => dispatch(loadGetAPITest()),
 })
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
+  mapDispatchToProps,
 )(ServiceApiExample)

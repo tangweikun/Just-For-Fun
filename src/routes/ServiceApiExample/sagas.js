@@ -1,12 +1,12 @@
-import { put, call, takeLatest } from "redux-saga/effects"
-import { testPost, getUnionLogin } from "../../service/index"
+import { put, call, takeLatest } from 'redux-saga/effects'
+import { testPost, getUnionLogin } from '../../service/index'
 import {
   ServiceApiExampleActionType,
   getAPITestSucess,
   getAPITestError,
   postAPITestSucess,
-  postAPITestError
-} from "./actions"
+  postAPITestError,
+} from './actions'
 
 function* getTestApi(atcion) {
   try {
@@ -25,7 +25,9 @@ function* postTestApi(atcion) {
   }
 }
 
-export function* watchRequestApi() {
+function* watchRequestApi() {
   yield takeLatest(ServiceApiExampleActionType.LOAD_GET_API, getTestApi)
   yield takeLatest(ServiceApiExampleActionType.LOAD_POST_API, postTestApi)
 }
+
+export default [watchRequestApi]
