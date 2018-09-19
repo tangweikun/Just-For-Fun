@@ -28,18 +28,78 @@ yarn start / npm run start
   > we recommend that you don’t reuse the same CSS classes across different components.
 - [x] 环境变量设置
   > 在`.env`里面配置环境变量
-- [ ] Code Splitting
+- [x] Code Splitting
+
   > [Code-Splitting](https://reactjs.org/docs/code-splitting.html)
-- [x] 代码风格
+
+  > [route-code-splitting](https://reacttraining.com/react-router/web/guides/code-splitting)
+
+  > 配合一下使用
+
+  [react-loadable](https://github.com/jamiebuilds/react-loadable)
+
+  [React Router Config](https://github.com/reacttraining/react-router/tree/master/packages/react-router-config)
+
+  ```
+  [
+  {
+    component: Layout,
+    routes: [
+      {
+        path: '/',
+        exact: true,
+        component: App,
+      },
+
+      {
+        path: '/topics',
+        component: Loadable({
+          loader: () => import('./routes/Topics'), // oh no!
+          loading: Loading,
+        }),
+        routes: [
+          {
+            path: '/topics/:topicId',
+            component: Loadable({
+              loader: () => import('./routes/Topics/Topic'), // oh no!
+              loading: Loading,
+            }),
+          },
+          {
+            path: '/topics',
+            component: () => <h3>Please select a topic.</h3>,
+            exact: true,
+          },
+        ],
+      },
+      {
+        component: () => <h3>404.</h3>,
+      },
+    ],
+  },
+  ]
+  ```
+
+* [x] getInjectAsync
+  > InjectAsyncReducer
+  > InjectAsyncSagas
+  ```
+   getInjectAsync({
+    store,
+    reducer,
+    sagas,
+    reducerName: 'serciveExample' });
+  ```
+* [x] 代码风格
   > 使用`prettier`和`preCommit`,统一项目代码风格
-- [x] hot loading
-- [x] 单元测试
+* [x] hot loading
+* [x] 单元测试
   > 基于`Jest`进行单元测试,配置`commit before test`
-- [x] Redux DevTools
-- [x] source-map-explorer
+* [x] Redux DevTools
+* [x] source-map-explorer
   > yarn analyze
   > 可以查看所 build 后拆分包占比大小
-- [x] react-i18next
+* [x] react-i18next
   > [react-i18next documentation](https://react.i18next.com/components/i18next-instance)
 
 ## Why use `create-react-app`
