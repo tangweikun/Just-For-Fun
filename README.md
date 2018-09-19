@@ -81,8 +81,11 @@ yarn start / npm run start
   ```
 
 * [x] getInjectAsync
-  > InjectAsyncReducer
-  > InjectAsyncSagas
+
+  > [InjectAsyncReducer]
+
+  > [InjectAsyncSagas]
+
   ```
    getInjectAsync({
     store,
@@ -90,6 +93,7 @@ yarn start / npm run start
     sagas,
     reducerName: 'serciveExample' });
   ```
+
 * [x] 代码风格
   > 使用`prettier`和`preCommit`,统一项目代码风格
 * [x] hot loading
