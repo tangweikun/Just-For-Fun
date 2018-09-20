@@ -21,11 +21,19 @@
     "source-map-explorer": "^1.6.0"
   },
   "proxy": {
-    "/api": {
+    "/qa/api": {
       "target": "http://qa.m.8win.com",
       "changeOrigin": true,
       "pathRewrite": {
-        "^/api": ""
+        "^/qa/api": ""
+      },
+      "ws": true
+    },
+    "/dev/api": {
+      "target": "http://192.168.0.32:22040",
+      "changeOrigin": true,
+      "pathRewrite": {
+        "^/dev/api": ""
       },
       "ws": true
     }
@@ -37,8 +45,11 @@
     ]
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start:dev": "REACT_APP_ENVIRONMENT=ZY_DEV react-scripts start",
+    "start:qa": "REACT_APP_ENVIRONMENT=ZY_QA react-scripts start",
+    "build:dev": "REACT_APP_ENVIRONMENT=ZY_DEV react-scripts build",
+    "build:qa": "REACT_APP_ENVIRONMENT=ZY_QA react-scripts build",
+    "build:prod": "REACT_APP_ENVIRONMENT=ZY_PROD react-scripts build",
     "test": "react-scripts test",
     "test:staged": "CI=true react-scripts test",
     "precommit": "lint-staged && npm run test:staged",

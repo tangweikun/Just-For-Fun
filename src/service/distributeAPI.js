@@ -1,9 +1,12 @@
-import { requestFetch } from "./request"
-import { serializeQuery } from "../utils/commonFunction"
-import { isObject, isEmpty } from "lodash"
-const REQUEST_PATH =
-  process.env.REACT_PRODUCT_REQUEST_PATH || "/command/execute"
-const PROXY_PATH = process.env.REACT_PRODUCT_PROXY_PATH || "/api"
+import { requestFetch } from './request'
+import { serializeQuery } from '../utils/commonFunction'
+import { isObject, isEmpty, get as _get } from 'lodash'
+import { ENVIRONMENT_MAP } from './apiProtocol'
+const appEncironment = process.env.REACT_APP_ENVIRONMENT
+
+const REQUEST_PATH = _get(ENVIRONMENT_MAP, `${appEncironment}.REQUEST_PATH`, '/command/execute')
+const PROXY_PATH = _get(ENVIRONMENT_MAP, `${appEncironment}.PROXY_PATH`, '/dev/api')
+
 /**
  *
  *method: 请求使用的方法，如 GET、POST。
@@ -20,16 +23,16 @@ const PROXY_PATH = process.env.REACT_PRODUCT_PROXY_PATH || "/api"
 const creactFetchOptions = options => {
   const initOptions = isObject(options) && !isEmpty(options) ? options : {}
   const defaultOptions = {
-    mode: "no-cors", // no-cors, cors, *same-origin
-    cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
-    credentials: "include", // include, same-origin, *omit
-    redirect: "follow", // manual, *follow, error
-    referrer: "no-referrer", // no-referrer, *client
-    method: "POST" // GET, POST, PUT, DELETE, etc.
+    mode: 'no-cors', // no-cors, cors, *same-origin
+    cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+    credentials: 'include', // include, same-origin, *omit
+    redirect: 'follow', // manual, *follow, error
+    referrer: 'no-referrer', // no-referrer, *client
+    method: 'POST', // GET, POST, PUT, DELETE, etc.
   }
   return {
     ...defaultOptions,
-    ...initOptions
+    ...initOptions,
   }
 }
 
@@ -51,9 +54,9 @@ export const post = ({
   proxyPath = PROXY_PATH,
   requestOptions,
   data = {},
-  page = "",
-  clientInfo = "",
-  contentType = "application/x-www-form-urlencoded"
+  page = '',
+  clientInfo = '',
+  contentType = 'application/x-www-form-urlencoded',
 }) => {
   let requestinitOptions = {}
   if (isObject(requestOptions) && !isEmpty(requestOptions)) {
@@ -61,15 +64,15 @@ export const post = ({
   }
   const body = {
     command: protocol,
-    data
+    data,
   }
   let bodyContent
 
   if (page) body.page = page
   if (clientInfo) body.clientInfo = clientInfo
-  if (contentType === "application/json") {
+  if (contentType === 'application/json') {
     bodyContent = `message=${encodeURIComponent(JSON.stringify(body))}`
-  } else if (contentType === "application/x-www-form-urlencoded") {
+  } else if (contentType === 'application/x-www-form-urlencoded') {
     bodyContent = `message=${encodeURIComponent(JSON.stringify(body))}`
     //bodyContent = serializeQuery(body);
   }
@@ -77,16 +80,13 @@ export const post = ({
   requestinitOptions = {
     ...requestinitOptions,
     body: bodyContent,
-    method: "POST",
+    method: 'POST',
     headers: {
-      "Content-Type": contentType
-    }
+      'Content-Type': contentType,
+    },
   }
   return requestFetch(
-    new Request(
-      `${proxyPath}${requestPath}`,
-      creactFetchOptions(requestinitOptions)
-    )
+    new Request(`${proxyPath}${requestPath}`, creactFetchOptions(requestinitOptions)),
   )
 }
 
@@ -105,21 +105,18 @@ export const get = ({
   proxyPath = PROXY_PATH,
   requestOptions,
   data,
-  contentType = "application/x-www-form-urlencoded"
+  contentType = 'application/x-www-form-urlencoded',
 }) => {
   let requestinitOptions = { headers: { contentType } }
   if (isObject(requestOptions) && !isEmpty(requestOptions)) {
     requestinitOptions = { ...requestinitOptions, ...requestOptions }
   }
-  const urlParams = data ? `?${serializeQuery(data)}` : ""
+  const urlParams = data ? `?${serializeQuery(data)}` : ''
   requestinitOptions = {
     ...requestinitOptions,
-    method: "GET"
+    method: 'GET',
   }
   return requestFetch(
-    new Request(
-      `${proxyPath}${requestPath}${urlParams}`,
-      creactFetchOptions(requestinitOptions)
-    )
+    new Request(`${proxyPath}${requestPath}${urlParams}`, creactFetchOptions(requestinitOptions)),
   )
 }

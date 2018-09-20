@@ -10,10 +10,10 @@
 - [x] .env
 - [ ] hoc
 - [ ] error handle
-- [ ] 支持设置 dev/qa
+- [x] 支持设置 dev/qa
 - [ ] 错误监控处理
 - [ ] font icon
-- [ ] deploy
+- [x] deploy
 - [x] adaptive
 - [ ] react-responsive-carousel
 - [ ] socket.io
