@@ -8,7 +8,7 @@ import adaptive from 'adaptive.js'
 import { I18nextProvider } from 'react-i18next'
 
 import createStore from './utils/createStore'
-import './index.css'
+import './index.module.css'
 import App from './App'
 import registerServiceWorker from './registerServiceWorker'
 import rootReducer from './reducers'
