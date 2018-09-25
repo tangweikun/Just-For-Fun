@@ -72,6 +72,13 @@ export const routes = [
         }),
       },
       {
+        path: '/counter-without-redux',
+        component: Loadable({
+          loader: () => import('./routes/Counter-Demo-Without-Redux'),
+          loading: Loading,
+        }),
+      },
+      {
         path: '/topics',
         component: Loadable({
           loader: () => import('./routes/Topics'), // oh no!

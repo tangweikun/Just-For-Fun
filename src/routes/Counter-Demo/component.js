@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React, { Component } from 'react'
 // import { testApi } from '../../api'
 
 export default class Counter extends Component {
@@ -15,16 +15,14 @@ export default class Counter extends Component {
       plusFirstThenMultiply,
       plusFive,
       subtract,
-      plusFirstThenDivideByTen
+      plusFirstThenDivideByTen,
     } = this.props
 
     return (
-      <div>
-        <p>总次数: {counter}</p>
+      <div style={{ border: '2px solid red', margin: '30px' }}>
+        <p>WITH_REDUX--->总次数: {counter}</p>
         <p>
-          <button onClick={() => plusFirstThenMultiply(2, 3)}>
-            plus 2 First Then Multiply 3
-          </button>{" "}
+          <button onClick={() => plusFirstThenMultiply(2, 3)}>plus 2 First Then Multiply 3</button>{' '}
         </p>
         <p>
           <button onClick={plusFive}>plus five</button>
