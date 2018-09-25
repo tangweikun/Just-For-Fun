@@ -31,6 +31,6 @@
 - [x] Avoid using relative path imports
 - [x] How to get query parameters
 - [x] Redux DevTools
-- [ ] CSS 命名问题
+- [x] CSS 命名问题
 - [x] source-map-explorer
 - [x] react-i18next
